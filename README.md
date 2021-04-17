@@ -12,3 +12,10 @@ ng new project1
 # to run a project
 first we need to navigate into project (code: cd project-name )
 ng serve -o
+
+
+# to create a component
+first we need to navigate into project (code: cd project-name )
+ng generate component component-name
+(or)
+ng g c component component-name

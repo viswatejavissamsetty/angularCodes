@@ -12,4 +12,11 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  whenClicked() {
+    console.log("clicked")
+  }
+
+  whenFocused(){
+    console.log("Focused");
+  }
 }

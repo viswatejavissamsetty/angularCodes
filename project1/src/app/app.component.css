@@ -4,4 +4,5 @@ h1 {
 
 .card{
     display: inline-flex;
+    background: gainsboro;
 }

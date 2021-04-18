@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Comp2Component implements OnInit {
 
-  constructor() { }
+  name: string;
+  age: number = 22;
+  gender: string = "M";
+
+
+  constructor() {
+    this.name = "vamsi"
+  }
 
   ngOnInit(): void {
+
   }
 
 }

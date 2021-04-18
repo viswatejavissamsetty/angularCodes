@@ -11,7 +11,7 @@ export class PropertyBindingComponent implements OnInit {
   isHidden:boolean = false;
   
   imagePath:string = "../../../assets/images/cat.jpg";
-  imageAlternate:string = "No cat image"
+  imageAlternate:string = "No cat image";
 
   constructor() { }
 

@@ -7,7 +7,8 @@ import { Comp1Component } from './comp1/comp1.component';
 import { PropertyBindingComponent } from './bindings/property-binding/property-binding.component';
 import { InterpolationBindingComponent } from './bindings/interpolation-binding/interpolation-binding.component';
 import { EventBindingComponent } from './bindings/event-binding/event-binding.component';
-import { ExampleTaskComponent } from './bindings/example-task/example-task.component';
+import { Task2Component } from './examples/task2/task2.component';
+import { Task1Component } from './examples/task1/task1.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ExampleTaskComponent } from './bindings/example-task/example-task.compo
     PropertyBindingComponent,
     InterpolationBindingComponent,
     EventBindingComponent,
-    ExampleTaskComponent
+    Task2Component,
+    Task1Component
   ],
   imports: [
     BrowserModule,

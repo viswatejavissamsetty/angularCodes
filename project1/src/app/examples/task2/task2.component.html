@@ -1,0 +1,4 @@
+<!-- <input type="text" [value]="name" #t (input)="tempMethod(t)"> -->
+<input type="text" [value]="name" #t (keydown)="name = t.value">
+<!-- [(ngModel)] -->
+{{name}}

@@ -1,0 +1,21 @@
+<div class="container">
+    <button class="controller" (click)="changeValue(1)">+</button>
+    <span class="data">{{value}}</span>
+    <button class="controller" (click)="changeValue(-1)">-</button>
+</div>
+
+<div class="container">
+    <button class="controller" (click)="value = value+1">+</button>
+    <span class="data">{{value}}</span>
+    <button class="controller" (click)="value = value-1">-</button>
+</div>
+
+<div class="container">
+    <button class="controller" (click)="increaseValue()">+</button>
+    <span class="data">{{value}}</span>
+    <button class="controller" (click)="decreaseValue()">-</button>
+</div>
+
+<button (click)="value = value + 1">+</button>
+{{value}}
+<button (click)="value = value - 1">-</button>

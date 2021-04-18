@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { PropertyBindingComponent } from './bindings/property-binding/property-binding.component';
 import { InterpolationBindingComponent } from './bindings/interpolation-binding/interpolation-binding.component';
+import { EventBindingComponent } from './bindings/event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Comp1Component,
     PropertyBindingComponent,
-    InterpolationBindingComponent
+    InterpolationBindingComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,

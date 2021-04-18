@@ -1,1 +1,6 @@
-<p>property-binding works!</p>
+{{isHidden}}
+<form action="">
+    <input type="text" placeholder="enter user name" [disabled]="isDisabled" [hidden]="isHidden">
+</form>
+
+<img [src]="imagePath" alt={{imageAlternate}}>

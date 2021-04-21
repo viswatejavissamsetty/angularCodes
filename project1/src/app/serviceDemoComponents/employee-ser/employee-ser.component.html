@@ -1,0 +1,23 @@
+<div class="container">
+    <!-- {{empData | json}} -->
+    <div class="row">
+        <div class="card bg-dark text-light col" *ngFor="let emp of empData; let i = index">
+            <div class="card-header">
+                <h4>Employee Details</h4>
+            </div>
+            <div class="card-body">
+                <h5>EmpNo: {{i + 1}}</h5>
+                <h5>Employee Name: {{emp.empName | uppercase}}</h5>
+                <h5>Employee Age: {{emp.age}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card bg-dark">
+            
+        </div>
+    </div>
+</div>

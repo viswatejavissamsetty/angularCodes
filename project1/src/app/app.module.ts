@@ -1,3 +1,5 @@
+import { EmployeeService } from './servicesDemo/employee.service';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +11,10 @@ import { InterpolationBindingComponent } from './bindings/interpolation-binding/
 import { EventBindingComponent } from './bindings/event-binding/event-binding.component';
 import { Task2Component } from './examples/task2/task2.component';
 import { Task1Component } from './examples/task1/task1.component';
+import { EmployeeListComponent } from './RouterExamples/employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './RouterExamples/employee-details/employee-details.component';
+import { EmployeeSerComponent } from './serviceDemoComponents/employee-ser/employee-ser.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,13 +24,20 @@ import { Task1Component } from './examples/task1/task1.component';
     InterpolationBindingComponent,
     EventBindingComponent,
     Task2Component,
-    Task1Component
+    Task1Component,
+    EmployeeListComponent,
+    EmployeeDetailsComponent,
+    EmployeeSerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

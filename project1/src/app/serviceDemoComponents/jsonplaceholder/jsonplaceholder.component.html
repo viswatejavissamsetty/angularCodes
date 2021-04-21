@@ -1,0 +1,21 @@
+<!-- {{data | json}} -->
+
+<!-- { "userId": 1, "id": 1, "title": "delectus aut autem", "completed": false } -->
+
+<table class="table table-hover table-primary table-bordered table-striped">
+    <thead>
+        <th>userId</th>
+        <th>id</th>
+        <th>title</th>
+        <th>completed</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let details of data">
+            <td>{{details.userId}}</td>
+            <td>{{details.id}}</td>
+            <td>{{details.title}}</td>
+            <td>{{details.completed}}</td>
+        </tr>
+    </tbody>
+</table>
+

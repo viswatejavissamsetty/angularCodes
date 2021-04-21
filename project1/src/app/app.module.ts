@@ -15,6 +15,7 @@ import { EmployeeListComponent } from './RouterExamples/employee-list/employee-l
 import { EmployeeDetailsComponent } from './RouterExamples/employee-details/employee-details.component';
 import { EmployeeSerComponent } from './serviceDemoComponents/employee-ser/employee-ser.component';
 import { HttpClientModule } from '@angular/common/http';
+import { JsonplaceholderComponent } from './serviceDemoComponents/jsonplaceholder/jsonplaceholder.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     Task1Component,
     EmployeeListComponent,
     EmployeeDetailsComponent,
-    EmployeeSerComponent
+    EmployeeSerComponent,
+    JsonplaceholderComponent
   ],
   imports: [
     BrowserModule,

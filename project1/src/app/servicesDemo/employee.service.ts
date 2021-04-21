@@ -21,4 +21,8 @@ export class EmployeeService {
     // ]
     return this.http.get("http://127.0.0.1:5500/testServer/data.json");
   }
+
+  getJsonPlaceHolderData(){
+    return this.http.get("https://jsonplaceholder.typicode.com/todos");
+  }
 }

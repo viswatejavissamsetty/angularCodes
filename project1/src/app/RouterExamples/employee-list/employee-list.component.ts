@@ -23,7 +23,7 @@ export class EmployeeListComponent implements OnInit {
 
   getDetails(emp: any) {
     // console.log(emp);
-    this.router.navigate(['employeeDetails', emp.empId]); //{"Id": emp.empId}, , {queryParams: emp}
+    this.router.navigate(['employeeDetails', emp.empId], {queryParams: emp}); //{"Id": emp.empId}, , {queryParams: emp}
     // this.router.navigateByUrl('employeeDetails/' + emp.empId);
   }
 

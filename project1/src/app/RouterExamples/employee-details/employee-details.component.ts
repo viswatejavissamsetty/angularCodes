@@ -24,12 +24,12 @@ export class EmployeeDetailsComponent implements OnInit {
 
     this.empData = employeeDetails;
 
+    // console.log(this.aRouter.snapshot.queryParams);
+    // this.displayData = this.aRouter.snapshot.queryParams;
+
     let empId = this.aRouter.snapshot.params.empId;
-    // this.displayData = empId;
-    // console.log(this.empData.find((data) => { 
-    //   return data.empId == empId;
-    // }));
-    this.displayData = this.empData.find((data:any) => {
+
+    this.displayData = this.empData.find((data: any) => {
       return data.empId == empId;
     });
   }

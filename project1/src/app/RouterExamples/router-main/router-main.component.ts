@@ -10,6 +10,9 @@ export class RouterMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem("name", "viswa");
+    localStorage.setItem("age", "22");
+    localStorage.setItem("gender", "Male");
   }
 
 }

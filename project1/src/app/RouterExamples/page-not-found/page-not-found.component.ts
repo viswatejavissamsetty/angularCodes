@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
 
+  name: string | null = "";
+
   constructor() { }
 
   ngOnInit(): void {
+    this.name = localStorage.getItem("name");
   }
 
 }

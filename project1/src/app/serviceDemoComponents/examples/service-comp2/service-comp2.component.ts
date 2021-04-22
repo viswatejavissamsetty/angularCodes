@@ -18,6 +18,7 @@ export class ServiceComp2Component implements OnInit {
   constructor(private service: TestService) { }
 
   ngOnInit(): void {
+    
     // this.empData = this.service.getEmpData();
     this.service.getEmpData().subscribe((data:any)=>{
       this.empData = data;

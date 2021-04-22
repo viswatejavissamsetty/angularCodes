@@ -1,1 +1,24 @@
 <p>employee-list works!</p>
+
+<table class="table table-striped table-hover table-light">
+    <thead>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee age</th>
+        <th>getDetails</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empData">
+            <td>{{emp.empId}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.age}}</td>
+            <td><button class="btn btn-primary" (click)="getDetails(emp)">GetData</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- function add(x, y){
+    return x+y;
+}
+
+add(12, 23) -->

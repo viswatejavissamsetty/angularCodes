@@ -20,6 +20,7 @@ import { JsonplaceholderComponent } from './serviceDemoComponents/jsonplaceholde
 import { ServiceComp1Component } from './serviceDemoComponents/examples/service-comp1/service-comp1.component';
 import { ServiceComp2Component } from './serviceDemoComponents/examples/service-comp2/service-comp2.component';
 import { RouterMainComponent } from './RouterExamples/router-main/router-main.component';
+import { PageNotFoundComponent } from './RouterExamples/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RouterMainComponent } from './RouterExamples/router-main/router-main.co
     JsonplaceholderComponent,
     ServiceComp1Component,
     ServiceComp2Component,
-    RouterMainComponent
+    RouterMainComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

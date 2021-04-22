@@ -1,1 +1,20 @@
-<p>employee-details works!</p>
+<!-- <p>employee-details works!</p> -->
+<!-- {{displayData | json}} -->
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card text-dark" [class]="displayData.age > 19 ? 'bg-secondary': 'bg-danger'">
+            <div class="card-header">
+                <h3 class="text-center">Employee Details</h3>
+            </div>
+            <div class="card-body">
+                <h4>Employee ID: <span>{{displayData.empId}}</span></h4>
+                <h4>Employee Name: <span>{{displayData.empName}}</span></h4>
+                <h4>Employee Age: <span>{{displayData.age}}</span></h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <button class="col-2 offset-5 btn btn-success" (click)="goBack()">Back</button>
+</div>

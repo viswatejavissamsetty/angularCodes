@@ -1,21 +1,26 @@
-<p>employee-list works!</p>
+<!-- <p>employee-list works!</p> -->
 
-<table class="table table-striped table-hover table-light">
-    <thead>
-        <th>Employee Id</th>
-        <th>Employee Name</th>
-        <th>Employee age</th>
-        <th>getDetails</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let emp of empData">
-            <td>{{emp.empId}}</td>
-            <td>{{emp.empName}}</td>
-            <td>{{emp.age}}</td>
-            <td><button class="btn btn-primary" (click)="getDetails(emp)">GetData</button></td>
-        </tr>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-6 offset-3">
+        <table class="table table-striped table-hover table-light">
+            <thead>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Employee age</th>
+                <th>getDetails</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of empData">
+                    <td>{{emp.empId}}</td>
+                    <td>{{emp.empName}}</td>
+                    <td>{{emp.age}}</td>
+                    <td><button [class]="emp.age > 20 ? 'btn btn-primary' : 'btn btn-danger'" (click)="getDetails(emp)">GetData</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
 
 <!-- function add(x, y){
     return x+y;

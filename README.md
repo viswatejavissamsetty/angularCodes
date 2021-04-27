@@ -1,4 +1,5 @@
-# Angular Codes
+# <center>Angular Codes</center>
+
 > ***This an explination repo***
   
 

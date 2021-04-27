@@ -1,21 +1,36 @@
-# angularCodes
-this an explination repo
+# Angular Codes
+> ***This an explination repo***
   
 
-# these all are used in terminal
-# to create angular project
-ng new project-name
-## example
-ng new project1
+# These all are used in terminal
+
+## To create angular project
+    ng new project-name
+### Example
+    ng new project1
 
 
-# to run a project
+## To run a project
 first we need to navigate into project (code: cd project-name )
-ng serve -o
+
+    ng serve -o
 
 
-# to create a component
+## To create a component
 first we need to navigate into project (code: cd project-name )
-ng generate component component-name
+
+    ng generate component component-name
+
 (or)
-ng g c component component-name
+    
+    ng g c component component-name
+
+## To create a service file
+first we need to navigate into project (code: cd project-name )
+
+    ng generate service service-name
+
+(or)
+
+    ng g s service-name
+

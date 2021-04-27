@@ -1,0 +1,12 @@
+$maincolor: green;
+
+@import url("stylea.css");
+
+div{
+    div{
+        color: blue;
+        div{
+            color: $maincolor;
+        }
+    }
+}

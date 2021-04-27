@@ -1,0 +1,9 @@
+@import url("stylea.css");
+div div {
+  color: blue;
+}
+
+div div div {
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */

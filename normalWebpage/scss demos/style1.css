@@ -1,0 +1,15 @@
+/* div div div{
+    color: blue;
+}
+
+div div{
+    color: green;
+} */
+
+/* div:nth-child(2n-1){
+    background: green;
+} */
+
+div:nth-child(even){
+    background: green;
+}

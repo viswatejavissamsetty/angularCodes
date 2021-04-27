@@ -21,6 +21,12 @@ import { ServiceComp1Component } from './serviceDemoComponents/examples/service-
 import { ServiceComp2Component } from './serviceDemoComponents/examples/service-comp2/service-comp2.component';
 import { RouterMainComponent } from './RouterExamples/router-main/router-main.component';
 import { PageNotFoundComponent } from './RouterExamples/page-not-found/page-not-found.component';
+import { ParentComp1Component } from './RouterChildExamples/parent-comp1/parent-comp1.component';
+import { ParentComp2Component } from './RouterChildExamples/parent-comp2/parent-comp2.component';
+import { ChildComp1Component } from './RouterChildExamples/child-comp1/child-comp1.component';
+import { ChildComp2Component } from './RouterChildExamples/child-comp2/child-comp2.component';
+import { InnerChild1Component } from './RouterChildExamples/inner-child1/inner-child1.component';
+import { InnerChild2Component } from './RouterChildExamples/inner-child2/inner-child2.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,13 @@ import { PageNotFoundComponent } from './RouterExamples/page-not-found/page-not-
     ServiceComp1Component,
     ServiceComp2Component,
     RouterMainComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ParentComp1Component,
+    ParentComp2Component,
+    ChildComp1Component,
+    ChildComp2Component,
+    InnerChild1Component,
+    InnerChild2Component
   ],
   imports: [
     BrowserModule,

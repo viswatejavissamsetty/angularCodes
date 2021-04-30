@@ -1,0 +1,5 @@
+3 type of validations - total 6
+
+valid --- invalid
+prestine --- dirty
+touched --- untouched

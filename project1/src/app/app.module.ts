@@ -27,6 +27,9 @@ import { ChildComp1Component } from './RouterChildExamples/child-comp1/child-com
 import { ChildComp2Component } from './RouterChildExamples/child-comp2/child-comp2.component';
 import { InnerChild1Component } from './RouterChildExamples/inner-child1/inner-child1.component';
 import { InnerChild2Component } from './RouterChildExamples/inner-child2/inner-child2.component';
+import { TemplateDrivenComponent } from './formsExamples/template-driven/template-driven.component';
+import { FormsModule } from '@angular/forms';
+import { TdfExampleComponent } from './formsExamples/tdf-example/tdf-example.component'
 
 @NgModule({
   declarations: [
@@ -50,13 +53,16 @@ import { InnerChild2Component } from './RouterChildExamples/inner-child2/inner-c
     ChildComp1Component,
     ChildComp2Component,
     InnerChild1Component,
-    InnerChild2Component
+    InnerChild2Component,
+    TemplateDrivenComponent,
+    TdfExampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     EmployeeService,

@@ -3,9 +3,9 @@
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" ngModel class="form-control" required pattern="[A-z0-9 ]{5,}">
-            <div *ngIf="userDetails.form.controls.username?.touched && userDetails.form.controls.username?.invalid">
-                <small class="text-danger" *ngIf="userDetails.form.controls.username?.errors?.required">Username required</small>
-                <small class="text-danger" *ngIf="userDetails.form.controls.username?.errors?.pattern">Invalid username</small>
+            <div class="text-danger" *ngIf="userDetails.form.controls.username?.touched && userDetails.form.controls.username?.invalid">
+                <small *ngIf="userDetails.form.controls.username?.errors?.required">Username required</small>
+                <small *ngIf="userDetails.form.controls.username?.errors?.pattern">Invalid username</small>
             </div>
             <!-- {{userDetails.form.controls.username?.errors | json}} -->
         </div>

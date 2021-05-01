@@ -1,65 +1,76 @@
-<div class="container">
-    <form class="form" #userDetails="ngForm" (ngSubmit)="submitForm(userDetails.value)">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" ngModel class="form-control" required pattern="[A-z0-9 ]{5,}">
-            <div class="text-danger" *ngIf="getUsername(userDetails)?.touched && getUsername(userDetails)?.invalid">
-                <small *ngIf="getUsername(userDetails)?.errors?.required">Username Required</small>
-                <small *ngIf="getUsername(userDetails)?.errors?.pattern">Invalid Username</small>
+<div class="row">
+    <div class="offset-3 col-6">
+
+        <div class="card">
+            <div class="card-body">
+                <div class="container">
+                    <form class="form" #userDetails="ngForm" (ngSubmit)="submitForm(userDetails.value)">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div style="display: flex;">
+                                <i class="bi bi-person-circle mr-1" style="font-size: 1.5em;"></i>
+                                <input type="text" name="username" id="username" ngModel class="form-control" required pattern="[A-z0-9 ]{5,}">
+                            </div>
+                            <div class="text-danger" *ngIf="getUsername(userDetails)?.touched && getUsername(userDetails)?.invalid">
+                                <small *ngIf="getUsername(userDetails)?.errors?.required">Username Required</small>
+                                <small *ngIf="getUsername(userDetails)?.errors?.pattern">Invalid Username</small>
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" ngModel class="form-control" required pattern="[a-z.0-9]{4,}@((gmail)|(yahoo)).com">
+                            <div class="text-danger" *ngIf="userDetails.form.controls.email?.touched && userDetails.form.controls.email?.invalid">
+                                <small *ngIf="userDetails.form.controls.email?.errors?.required">Email Required</small>
+                                <small *ngIf="userDetails.form.controls.email?.errors?.pattern">Invalid Email</small>
+                            </div>
+                            <!-- {{userDetails.form.controls.email?.errors | json}} -->
+                        </div>
+                
+                        <div class="from-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" ngModel class="form-control" required>
+                            <div class="text-danger" *ngIf="userDetails.form.controls.password?.touched && userDetails.form.controls.password?.invalid">
+                                <small *ngIf="userDetails.form.controls.password?.errors?.required">Password Required</small>
+                            </div>
+                        </div>
+                
+                        <div class="from-group">
+                            <label for="rpassword">Re-Enter Password</label>
+                            <input type="password" name="rpassword" id="rpassword" ngModel class="form-control" required>
+                            <div class="text-danger" *ngIf="userDetails.form.controls.rpassword?.touched && userDetails.form.controls.rpassword?.invalid">
+                                <small *ngIf="userDetails.form.controls.rpassword?.errors?.required">Re-Enter Password Required</small>
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" name="age" id="age" ngModel class="form-control" required>
+                            <div class="text-danger" *ngIf="userDetails.form.controls.age?.touched && userDetails.form.controls.age?.invalid">
+                                <small *ngIf="userDetails.form.controls.age?.errors?.required">Age Required</small>
+                            </div>
+                        </div>
+                
+                        <div class="form-check form-check-inline">
+                            <label for="">Gender : </label>
+                            <label class="form-check-label m-2">
+                                <input class="form-check-input" type="radio" name="gender" id="M" value="M" ngModel required> Male
+                            </label>
+                            <label class="form-check-label m-2">
+                                <input class="form-check-input" type="radio" name="gender" id="F" value="F" ngModel required> Female
+                            </label>
+                            <small class="text-danger" *ngIf="userDetails.form.controls.gender?.invalid && userDetails.form.controls.gender?.errors?.required">Gender Required</small>
+                        </div>
+                
+                        <div>
+                            <button type="submit" [disabled]="userDetails.form.invalid" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                        </div>
+                        
+                    </form>
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" ngModel class="form-control" required pattern="[a-z.0-9]{4,}@((gmail)|(yahoo)).com">
-            <div class="text-danger" *ngIf="userDetails.form.controls.email?.touched && userDetails.form.controls.email?.invalid">
-                <small *ngIf="userDetails.form.controls.email?.errors?.required">Email Required</small>
-                <small *ngIf="userDetails.form.controls.email?.errors?.pattern">Invalid Email</small>
-            </div>
-            <!-- {{userDetails.form.controls.email?.errors | json}} -->
-        </div>
-
-        <div class="from-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" ngModel class="form-control" required>
-            <div class="text-danger" *ngIf="userDetails.form.controls.password?.touched && userDetails.form.controls.password?.invalid">
-                <small *ngIf="userDetails.form.controls.password?.errors?.required">Password Required</small>
-            </div>
-        </div>
-
-        <div class="from-group">
-            <label for="rpassword">Re-Enter Password</label>
-            <input type="password" name="rpassword" id="rpassword" ngModel class="form-control" required>
-            <div class="text-danger" *ngIf="userDetails.form.controls.rpassword?.touched && userDetails.form.controls.rpassword?.invalid">
-                <small *ngIf="userDetails.form.controls.rpassword?.errors?.required">Re-Enter Password Required</small>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="age">Age</label>
-            <input type="number" name="age" id="age" ngModel class="form-control" required>
-            <div class="text-danger" *ngIf="userDetails.form.controls.age?.touched && userDetails.form.controls.age?.invalid">
-                <small *ngIf="userDetails.form.controls.age?.errors?.required">Age Required</small>
-            </div>
-        </div>
-
-        <div class="form-check form-check-inline">
-            <label for="">Gender : </label>
-            <label class="form-check-label m-2">
-                <input class="form-check-input" type="radio" name="gender" id="M" value="M" ngModel required> Male
-            </label>
-            <label class="form-check-label m-2">
-                <input class="form-check-input" type="radio" name="gender" id="F" value="F" ngModel required> Female
-            </label>
-            <small class="text-danger" *ngIf="userDetails.form.controls.gender?.invalid && userDetails.form.controls.gender?.errors?.required">Gender Required</small>
-        </div>
-
-        <div>
-            <button type="submit" [disabled]="userDetails.form.invalid" class="btn btn-primary">Submit</button>
-            <button type="reset" class="btn btn-secondary">Reset</button>
-
-            <!-- {{userDetails.form.valid}} -->
         </div>
         
-    </form>
+    </div>
 </div>

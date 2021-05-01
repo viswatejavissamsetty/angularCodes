@@ -4,6 +4,7 @@
             <label for="username">Username</label>
             <input type="text" name="username" id="username" ngModel class="form-control" required pattern="[A-z0-9 ]{5,}">
             <small class="text-danger" *ngIf="userDetails.form.controls.username?.invalid && userDetails.form.controls.username?.errors?.required">Username required</small>
+            <small class="text-danger" *ngIf="userDetails.form.controls.username?.invalid && userDetails.form.controls.username?.errors?.pattern">Invalid username</small>
         </div>
 
         <div class="form-group">

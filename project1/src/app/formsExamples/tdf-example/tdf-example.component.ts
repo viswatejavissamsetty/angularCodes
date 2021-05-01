@@ -12,6 +12,10 @@ export class TdfExampleComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getUsername(x:any){
+    return x.form.controls.username;
+  }
+
   submitForm(data:any){
     console.log(data);
   }

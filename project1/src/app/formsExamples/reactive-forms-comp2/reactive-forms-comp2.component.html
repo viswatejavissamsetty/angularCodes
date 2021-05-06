@@ -1,0 +1,172 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-6">
+            <div class="card shadow" #card (click)="toggleActivation(card)">
+                <div class="card-body">
+
+                    <form action="ignore" [formGroup]="formData" class="form">
+                        <div class="form-group">
+                            <label for="username">UserName</label>
+                            <input type="text" name="username" id="username" class="form-control"
+                                placeholder="Enter User Name" formControlName="userName" required>
+                            <div *ngIf="userName?.invalid && userName?.touched && userName?.dirty">
+                                <small class="text-danger" *ngIf="userName?.errors?.required">UserName Required</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control"
+                                placeholder="Enter Password" formControlName="password" required>
+                            <div *ngIf="password?.invalid && password?.touched && password?.dirty">
+                                <small class="text-danger" *ngIf="password?.errors?.required">Password Required</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rPassword">Re-Enter Password</label>
+                            <input type="password" name="rPassword" id="rPassword" class="form-control"
+                                placeholder="Re-Enter Password" formControlName="rPassword" required>
+                            <div *ngIf="rPassword?.invalid && rPassword?.touched && rPassword?.dirty">
+                                <small class="text-danger" *ngIf="rPassword?.errors?.required">Re-Enter Password Required</small>
+                            </div>
+                            <div *ngIf="rPassword?.touched && rPassword?.dirty">
+                                <small class="text-danger" *ngIf="formData.errors?.passwordError">{{formData.errors?.passwordError?.message}}</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" name="age" id="age" max="100" min="0" class="form-control"
+                                placeholder="Enter Age" formControlName="age" [(ngModel)]="ageS" required>
+                            <input type="range" name="age" id="ageS" max="100" min="0" step="1" class="form-control"
+                                formControlName="age" [(ngModel)]="ageS" required>
+                            <div *ngIf="age?.invalid && age?.touched && age?.dirty">
+                                <small class="text-danger" *ngIf="age?.errors?.required">Age Required</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Gender">Gender : </label>
+                            <span class="form-group ml-3">
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" value="Male" id="male" formControlName="gender"
+                                    class="ml-1">
+                            </span>
+                            <span class="form-group ml-3">
+                                <label for="female">Female</label>
+                                <input type="radio" name="gender" value="Female" id="female" formControlName="gender"
+                                    class="ml-1">
+                            </span>
+                        </div>
+
+                        <div class="row">
+                            <button type="submit" class="col-2 offset-3 btn btn-outline-success" [disabled]="formData.invalid">Submit</button>
+                            <button type="reset" class="col-2 offset-2 btn btn-outline-danger">Reset</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="result">
+        <div class="card shadow mt-1">
+            <div class="card-body">
+                <table class="table table-bordered table-hover table-dark">
+                    <thead>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{userName?.value}}</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>{{password?.value}}</td>
+                        </tr>
+                        <tr>
+                            <td>ReEntered Password</td>
+                            <td>{{rPassword?.value}}</td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>{{age?.value}}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>{{gender?.value}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card shadow mt-1">
+            <div class="card-body">
+                <h4 class="card-title text-center">Errors</h4>
+                <table class="table table-bordered table-hover table-dark">
+                    <thead>
+                        <th>Property/State</th>
+                        <th>Valid</th>
+                        <th>Invalid</th>
+                        <th>Pristine</th>
+                        <th>Dirty</th>
+                        <th>Touched</th>
+                        <th>UnTouched</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td>{{userName?.valid}}</td>
+                            <td>{{userName?.invalid}}</td>
+                            <td>{{userName?.pristine}}</td>
+                            <td>{{userName?.dirty}}</td>
+                            <td>{{userName?.touched}}</td>
+                            <td>{{userName?.untouched}}</td>
+                        </tr>
+                        <tr>
+                            <th>Password</th>
+                            <td>{{password?.valid}}</td>
+                            <td>{{password?.invalid}}</td>
+                            <td>{{password?.pristine}}</td>
+                            <td>{{password?.dirty}}</td>
+                            <td>{{password?.touched}}</td>
+                            <td>{{password?.untouched}}</td>
+                        </tr>
+                        <tr>
+                            <th>Re-Enter Password</th>
+                            <td>{{rPassword?.valid}}</td>
+                            <td>{{rPassword?.invalid}}</td>
+                            <td>{{rPassword?.pristine}}</td>
+                            <td>{{rPassword?.dirty}}</td>
+                            <td>{{rPassword?.touched}}</td>
+                            <td>{{rPassword?.untouched}}</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>{{age?.valid}}</td>
+                            <td>{{age?.invalid}}</td>
+                            <td>{{age?.pristine}}</td>
+                            <td>{{age?.dirty}}</td>
+                            <td>{{age?.touched}}</td>
+                            <td>{{age?.untouched}}</td>
+                        </tr>
+                        <tr class="bg-success">
+                            <th>Overall Form</th>
+                            <td>{{formData?.valid}}</td>
+                            <td>{{formData?.invalid}}</td>
+                            <td>{{formData?.pristine}}</td>
+                            <td>{{formData?.dirty}}</td>
+                            <td>{{formData?.touched}}</td>
+                            <td>{{formData?.untouched}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

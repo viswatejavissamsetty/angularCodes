@@ -28,8 +28,10 @@ import { ChildComp2Component } from './RouterChildExamples/child-comp2/child-com
 import { InnerChild1Component } from './RouterChildExamples/inner-child1/inner-child1.component';
 import { InnerChild2Component } from './RouterChildExamples/inner-child2/inner-child2.component';
 import { TemplateDrivenComponent } from './formsExamples/template-driven/template-driven.component';
-import { FormsModule } from '@angular/forms';
-import { TdfExampleComponent } from './formsExamples/tdf-example/tdf-example.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TdfExampleComponent } from './formsExamples/tdf-example/tdf-example.component';
+import { ReactiveFormsComp1Component } from './formsExamples/reactive-forms-comp1/reactive-forms-comp1.component';
+import { ReactiveFormsComp2Component } from './formsExamples/reactive-forms-comp2/reactive-forms-comp2.component'
 
 @NgModule({
   declarations: [
@@ -55,14 +57,17 @@ import { TdfExampleComponent } from './formsExamples/tdf-example/tdf-example.com
     InnerChild1Component,
     InnerChild2Component,
     TemplateDrivenComponent,
-    TdfExampleComponent
+    TdfExampleComponent,
+    ReactiveFormsComp1Component,
+    ReactiveFormsComp2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     EmployeeService,
